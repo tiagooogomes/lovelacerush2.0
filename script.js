@@ -2,17 +2,17 @@ const carrinho =  {
     "popular": {
         "maxima" : {"min": 180, "max": 200},
         "minima" : {"min": 110, "max": 130},
-        "derrapagem": {"min": 1 - 0.3, "max": 1 - 0.4}
+        "derrapagem": {"min": 0.03, "max": 0.04}
     },
     "esporte": {
         "maxima" : {"min": 195, "max": 215}, 
         "minima": {"min": 125, "max": 145}, 
-        "derrapagem": {"min": 1 - 0.2, "max": 1 - 0.3}
+        "derrapagem": {"min": 0.02, "max": 0.03}
     },
     "super" : {
         "maxima": {"min": 210, "max": 230}, 
         "minima": {"min": 140, "max": 160}, 
-        "derrapagem": {"min": 1 - 0.1, "max": 1 - 0.175}
+        "derrapagem": {"min": 0.01, "max": 0.0175}
     },
 };
 
@@ -44,15 +44,15 @@ function sorteioCarrinhos(){
     if(tipoDaRaridade == 1){
         velocidadeMinima = random(carrinho.popular.minima.min, carrinho.popular.minima.max);
         velocidadeMaxima = random(carrinho.popular.maxima.min, carrinho.popular.maxima.max);
-        derrapagem = random(carrinho.popular.derrapagem.min, carrinho.popular.derrapagem.max);
+        derrapagem = 1 - random(carrinho.popular.derrapagem.min, carrinho.popular.derrapagem.max);
     }else if(tipoDaRaridade == 2){
         velocidadeMinima = random(carrinho.esporte.minima.min, carrinho.esporte.minima.max);
         velocidadeMaxima = random(carrinho.esporte.maxima.min, carrinho.esporte.maxima.max);
-        derrapagem = random(carrinho.esporte.derrapagem.min, carrinho.esporte.derrapagem.max);
+        derrapagem = 1 - random(carrinho.esporte.derrapagem.min, carrinho.esporte.derrapagem.max);
     }else{
         velocidadeMinima = random(carrinho.super.minima.min, carrinho.super.minima.max);
         velocidadeMaxima = random(carrinho.super.maxima.min, carrinho.super.maxima.max);
-        derrapagem = random(carrinho.super.derrapagem.min, carrinho.super.derrapagem.max);
+        derrapagem = 1 - random(carrinho.super.derrapagem.min, carrinho.super.derrapagem.max);
     }
 
     caracteristicas.push(velocidadeMinima);
