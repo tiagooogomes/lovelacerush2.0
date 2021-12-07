@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>LOVELACE | RUSH</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/carrinho.png" type="image/x-icon">
+    </head>
+    <body>
+        <main>
+            <img src="img/capa2.png" width="100%">
+            <section>
+                <h2>3 PESSOAS COMPETIRÃO HOJE E VOCÊ DECIDE <span>AS REGRAS</span></h2>
+                <div id="personagens">
+                    <img src="img/pessoa1.jpg">
+                    <img src="img/pessoa2.jpg">
+                    <img src="img/pessoa3.jpg">
+                </div>
+                <div id="nomes">
+                    <h3>Pedro</h3>
+                    <h3>Juca</h3>
+                    <h3>Edna</h3>
+                </div>
+            </section>
+            <h2>ESCOLHA O MODO DE CORRIDA COM A QUANTIDADE DE VOLTAS</h2>  
+            <form>
+                <input type="button" id="minimo" value="CORRIDA RÁPIDA 10" onclick=" menosRodada()" />
+                <input type="button" id="media" value="GRANDE PRÊMIO 70" onclick="mediaRodada()" />
+                <input type="button" id="maximo" value="ENDURO 160" onclick="maximaRodada()" />
+            </form>
+            <section id="resultados">
+                <p id="texto"></p>
+                <div id="voltas">
+                    <h3>Voltas</h3>
+                    <p>Pedro: <samp id="pedro">00</samp></p>
+                    <p>Juca: <span id="juca">00</span></p>
+                    <p>edna: <span id="edna">00</span></p>
+                </div>
+            </section>
+            <footer>
+                <h3>by. Aspirante Tiago Santos</h3>
+            </footer>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
